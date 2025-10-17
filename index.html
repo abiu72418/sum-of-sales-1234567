@@ -9,7 +9,35 @@
 <body>
     <div class="container mt-5">
         <h1>Sales Summary</h1>
-        <div id="total-sales" class="display-4"></div>
+        <div id="total-sales" class="display-4" data-region="global"></div>
+        <div class="mb-3">
+            <label for="currency-picker" class="form-label">Select Currency:</label>
+            <select id="currency-picker" class="form-select">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="region-filter" class="form-label">Select Region:</label>
+            <select id="region-filter" class="form-select">
+                <option value="global">Global</option>
+                <option value="north-america">North America</option>
+                <option value="europe">Europe</option>
+                <option value="asia">Asia</option>
+            </select>
+        </div>
+        <table id="product-sales" class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Sales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sales data will be populated here -->
+            </tbody>
+        </table>
     </div>
     <script src="src/app.js"></script>
 </body>
